@@ -14,8 +14,8 @@
       <div>收到信息: {{ mcumsg }}</div>
       <div>
         <ul>
+          <li>状态: {{ +SData  ? 异常 : 正常 }}</li>
           <li>温度: {{ TData }}</li>
-          <li>湿度: {{ SData }}</li>
           <li>烟雾浓度: {{ QData }}</li>
         </ul>
       </div>

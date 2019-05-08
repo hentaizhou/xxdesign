@@ -46,7 +46,8 @@ function DealConnect(socket) {
     subStr_M = str.match(/M:(\S*)/)
     let mcuDatas = `${subStr_S},${subStr_T},${subStr_M}`
     // 格式  S:0T:2501M:075
-    ws_socket.emit('datas', mcuDatas)
+    // ws_socket.emit('datas', mcuDatas)
+    wsS.io.emit('datas', mcuDatas)
   })
 
   // 客户端正常断开时执行

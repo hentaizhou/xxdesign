@@ -16,10 +16,11 @@ var init_ws = function() {
       console.log(data)
     })
     // socket.emit('datas', 'test msg!!!!')
-    return socket
+    return 'init ok!!'
   })
 }
 
 module.exports = {
-  ws_server: init_ws
+  ws_server: init_ws,
+  io
 }

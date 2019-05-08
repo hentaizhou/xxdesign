@@ -15,9 +15,9 @@ var init_ws = function() {
       //将消息输出到控制台
       console.log(data)
     })
-    socket.emit('datas', 'test msg!!!!')
+    // socket.emit('datas', 'test msg!!!!')
+    return socket
   })
-  return 'init ok!'
 }
 
 module.exports = {

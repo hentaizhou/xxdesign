@@ -12,13 +12,23 @@
     <div id="app">
       <div>连接状态: {{ islink ? '连接' : '断开' }}</div>
       <div>收到信息: {{ mcumsg }}</div>
+      <div>
+        <ul>
+          <li>温度: {{ TData }}</li>
+          <li>湿度: {{ SData }}</li>
+          <li>烟雾浓度: {{ QData }}</li>
+        </ul>
+      </div>
     </div>
     <script>
       var Vue = new Vue({
         el: '#app',
         data: {
           islink: false,
-          mcumsg: ''
+          mcumsg: '',
+          TData: '',
+          SData: '',
+          QData: ''
         },
         methods: {}
       })

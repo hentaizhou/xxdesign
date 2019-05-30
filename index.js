@@ -41,9 +41,9 @@ function DealConnect(socket) {
     console.log('received data ', data)
     // 将获得的数据传给ws emit 发送到web端
     let str = data
-    subStr_S = str.match(/S:(\S*:)/)
-    subStr_T = str.match(/T:(\S*)M/)
-    subStr_M = str.match(/M:(\S*)/)
+    subStr_S = str.match(/S:(\S*)T/)[1]
+    subStr_T = str.match(/T:(\S*)M/)[1]
+    subStr_M = str.match(/M:(\S*)/)[1]
     let mcuDatas = `${subStr_S},${subStr_T},${subStr_M}`
     // 格式  S:0T:2501M:075
     // ws_socket.emit('datas', mcuDatas)
